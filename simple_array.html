@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <h1>Sample Screen</h1>
+  <style>
+    body { padding: 5px;
+
+    }
+
+  </style>
+</head>
+<body>
+  <form action="" style="width: 370px;">
+    <fieldset>
+      <legend>Thực hành tạo mảng đơn giản</legend>
+      <input type="text" id="textvalue" style="height: 20px; text-align: center;margin-left: 8px;color: red;"/>
+      <button type="button" id="btnAdd" value="Add" onclick="add_element_ar();" style="margin-left: 15px;">Add</button>
+      <button type="button" id="btnDisplay" value="Display" onclick="display_ar();" style="margin-left: 18px;">Display</button>
+      <p id="result">result</p>
+    </fieldset>
+  </form>
+
+
+</body>
+
+</HTML>
+
+<script>
+  let x = 0;
+  let arr = [];
+
+  function add_element_ar() {
+  arr[x] = document.getElementById("textvalue").value;
+  alert("Element: " + arr[x] + " Add at index " + x);
+  x++;
+  document.getElementById("textvalue") = "";
+
+}
+
+function display_ar() {
+  let e = '';
+  for (let i = 0; i < arr.length; i++) {
+      e += "Element " + i + " = " + arr[i] + "</br>"
+
+  }
+
+  document.getElementById("result").innerHTML = e;
+
+}
+
+</script>
+
+

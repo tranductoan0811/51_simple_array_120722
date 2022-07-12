@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <!-- <h2>
+      Nhập các phần tử của mảng bằng prompt đến khi nào nhập q thì thôi
+
+      Nhập vào một giá trị cần tìm trong mảng, check giá trị đó có thuộc mảng hay không và in ra thông báo
+    </h2> -->
+    <script>
+      
+      let element_arr = prompt("Enter array Element: ");
+      let arr = [];
+      
+      while (element_arr != "q") {
+        
+        arr.push(element_arr);      
+        element_arr = prompt("Enter array Element: ");
+      }
+       
+       let element_check = prompt("Enter element check: ");
+       let flag = false;
+       for (let j = 0; j <= arr.length-1; j++) {
+
+            if (element_check == arr[j]) {
+
+              flag = true;
+            } 
+       
+       }
+
+       if (flag) { 
+
+        alert("Element_check exist in arr");
+
+       } else {
+
+        alert("Element_check does not exist in arr");
+
+       }
+
+    </script>
+    
+
+
+
+</body>
+
+
+</html>
+
+
+
